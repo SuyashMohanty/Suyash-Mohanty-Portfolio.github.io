@@ -1,0 +1,289 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Suyash Mohanty Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>Suyash Mohanty<br />
+						</h1>
+						<p>Technology Consulting (Data Science & Analytics) <br /> <br /> Skilled In: Python, Power BI, Alteryx, SQL, Generative AI, NLP, LLM, Fast API, Streamlit <br /> 
+						<!--	<a href="https://github.com/SuyashMohanty?tab=repositories">Github</a>		<a href="https://www.linkedin.com/in/suyash-mohanty">LinkedIn</a></p> -->
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="https://drive.google.com/file/d/199D1qIVcE-R74aaFZzu8-uU0pnGAUPIf/view?usp=sharing" class="logo">Resume</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li class="active"><a href="index.html">Projects</a></li>
+							<!-- <li><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li> -->
+						</ul>
+						<ul class="icons">
+							<li><a href="https://www.linkedin.com/in/suyash-mohanty" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+							<li><a href="https://github.com/SuyashMohanty" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post RAG Chatbot with Multi-Source Querying System -->
+						<article class="post featured">
+							<header class="major">
+								<h2><a href="https://github.com/SuyashMohanty/Gen-AI-RAG-Chatbot-with-Multi-Source-Querying-System">
+									Generative AI Chatbot with Multi-Source Querying System<br />
+								</a></h2>
+								<p>This project implements a Retrieval Argument Generation (RAG) Chatbot with a multi-source querying system designed to handle natural language queries across three key domains: Technical, Diet, and Patient-related information.</p>
+							</header>
+
+							<!-- Image carousel -->
+							<div class="carousel">
+								<div class="carousel-images">
+									<img src="images/RAG Chatbot/01.png" alt="Chatbot Interface Screenshot 1" class="carousel-slide" />
+									<img src="images/RAG Chatbot/02.png" alt="Chatbot Interface Screenshot 2" class="carousel-slide" />
+									<img src="images/RAG Chatbot/03.png" alt="Chatbot Interface Screenshot 3" class="carousel-slide" />
+									<img src="images/RAG Chatbot/04.png" alt="Chatbot Interface Screenshot 3" class="carousel-slide" />
+									<img src="images/RAG Chatbot/05.png" alt="Chatbot Interface Screenshot 3" class="carousel-slide" />
+								</div>
+								<!-- Carousel navigation buttons -->
+								<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+								<a class="next" onclick="changeSlide(1)">&#10095;</a>
+							</div>
+
+							<br /><ul class="actions special">
+								<li><a href="https://github.com/SuyashMohanty/Gen-AI-RAG-Chatbot-with-Multi-Source-Querying-System" class="button large">View Project</a></li>
+							</ul>
+						</article>
+
+						<style>
+							/* Carousel container styling */
+							.carousel {
+								position: relative;
+								max-width: 100%;
+								margin: auto;
+								overflow: hidden;
+							}
+						
+							.carousel-images {
+								display: flex;
+								width: 100%;
+							}
+						
+							.carousel-slide {
+								display: none;
+								width: 100%;
+							}
+						
+							.carousel-slide.active {
+								display: block;
+							}
+						
+							/* Navigation button styling */
+							.prev, .next {
+								cursor: pointer;
+								position: absolute;
+								top: 50%;
+								transform: translateY(-50%);
+								width: auto;
+								padding: 16px;
+								color: white;
+								font-weight: bold;
+								font-size: 18px;
+								transition: 0.3s;
+								user-select: none;
+								background-color: rgba(0, 0, 0, 0.5);
+								border-radius: 3px;
+							}
+						
+							.next {
+								right: 10px;
+							}
+						
+							.prev {
+								left: 10px;
+							}
+						
+							.prev:hover, .next:hover {
+								background-color: rgba(0, 0, 0, 0.8);
+							}
+						</style>
+
+						<script>
+							let slideIndex = 0;
+
+							// Function to show a specific slide
+							function showSlide(n) {
+								const slides = document.querySelectorAll('.carousel-slide');
+								if (n >= slides.length) slideIndex = 0;
+								if (n < 0) slideIndex = slides.length - 1;
+								slides.forEach((slide, index) => {
+									slide.classList.toggle('active', index === slideIndex);
+								});
+							}
+
+							// Function to change the slide (next/previous)
+							function changeSlide(n) {
+								showSlide(slideIndex += n);
+							}
+
+							// Auto-play carousel
+							setInterval(() => changeSlide(1), 3000); // Change image every 3 seconds
+
+							// Initial slide display
+							showSlide(slideIndex);
+						</script>
+						
+						<!-- Featured Post Retail Edge Insight Suit 
+							<article class="post featured">
+								<header class="major">
+									
+									<h2><a href="#">Retail Edge Insight Suite<br />
+									</a></h2>
+									<p>This Project is About Retail Analytics Insight</p>
+								</header>
+								<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+								<ul class="actions special">
+									<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="button large">View Project</a></li>
+								</ul>
+							</article> -->
+
+						<!-- Posts -->
+							<!--<section class="posts">-->
+							<!-- Business Analytics Suite Section -->
+							<section class="business-analytics-suite">
+								<header class="major">
+									<h1>Business Analytics Suite</h1>
+									<p>A comprehensive suite of dashboards for analytics across pricing, sales, demand forecasting, and customer segmentation.</p>
+								</header>	
+								<!-- Pricing Simulator -->
+								<article>
+									<header>
+										
+										<h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator">Pricing Simulator<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="image fit"><img src="images/Retail Edge Insight Suite/Pricing Simulator.png" alt="" /></a>
+									<p>This dashboard provides a comprehensive view of price optimization strategies tailored to different customer segments. It helps identify the ideal price points to maximize revenue and profit margin while considering the varying demand patterns of each segment.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- Sales Analytics -->
+								<article>
+									<header>
+										
+										<h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics">Sales Analytics<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="image fit"><img src="images/Retail Edge Insight Suite/Sales Analytics 01.png" alt="" /></a>
+									<p>The overarching objective of the Sales Analytics Dashboard is to provide a comprehensive and interactive tool for analyzing sales performance, identifying trends, and making data-driven decisions.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- Price Elasticity -->
+								<article>
+									<header>
+										
+										<h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity">Price Elasticity<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="image fit"><img src="images/Retail Edge Insight Suite/Price Elasticity.png" alt="" /></a>
+									<p>The dashboard provides a comprehensive view of pricing elasticity across different customer segments (Diamond, Platinum, Gold, Silver) and product categories (SKU). It allows users to analyze the impact of price changes on demand, promotional activities, and competitor pricing.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- Demand Forecasting -->
+								<article>
+									<header>
+										
+										<h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting">Demand Forecasting<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="image fit"><img src="images/Retail Edge Insight Suite/Demand Forecasting.png" alt="" /></a>
+									<p>Overall, this dashboard offers a valuable tool for understanding and planning future demand for a specific SKU. By visualizing the forecast and considering relevant factors, businesses can make informed decisions regarding inventory management, production planning, and pricing strategies.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="button">View Project</a></li>
+									</ul>
+								</article>
+								<!-- Customer Segmentation -->
+								<article>
+									<header>
+										
+										<h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation">Customer Segmentation<br />
+										</a></h2>
+									</header>
+									<a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="image fit"><img src="images/Retail Edge Insight Suite/Customer Segmentation.png" alt="" /></a>
+									<p>The overall objective of the Customer Segmentation dashboard is to provide a comprehensive view of the customer base, their purchasing behavior, and their potential value to the business. By analyzing customer data, the dashboard helps identify key customer segments, understand their needs and preferences, and develop targeted marketing and sales strategies.</p>
+									<ul class="actions special">
+										<li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="button">View Project</a></li>
+									</ul>
+								</article>
+								
+							</section>
+							
+						
+
+				
+						<section class="split contact">
+							<section class="alt">
+								<h3>Location</h3>
+								<p>INDIA<br /></p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">+91-8763045544</a><br />
+									<a href="#">+91-8763045544</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">Suyash.Mohanty@outlook.com</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									
+									<li><a href="https://www.linkedin.com/in/suyash-mohanty" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
+									<li><a href="https://github.com/SuyashMohanty" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
