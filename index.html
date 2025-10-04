@@ -8,44 +8,40 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
+        /* Carousel Styles */
         .carousel {
             position: relative;
             max-width: 100%;
             margin: auto;
             overflow: hidden;
-            border-radius: 8px; /* Added subtle rounded corners */
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Added a subtle shadow */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-
         .carousel-images {
             display: flex;
-            transition: transform 0.5s ease-in-out; /* For potential slide transitions */
         }
-
         .carousel-slide {
             min-width: 100%;
             opacity: 0;
-            transition: opacity 0.7s ease-in-out; /* Smooth fade transition */
-            position: absolute; /* Stack images on top of each other */
+            transition: opacity 0.7s ease-in-out;
+            position: absolute;
             top: 0;
             left: 0;
-            visibility: hidden; /* Hide non-active slides from screen readers */
+            visibility: hidden;
         }
-
         .carousel-slide.active {
-            position: relative; /* Let active slide define container height */
+            position: relative;
             opacity: 1;
             visibility: visible;
         }
-
-        /* Improved Navigation Buttons */
         .carousel .prev,
         .carousel .next {
             cursor: pointer;
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: auto;
+            width: 45px;
+            height: 45px;
             padding: 16px;
             color: white;
             font-weight: bold;
@@ -53,26 +49,25 @@
             transition: all 0.3s ease;
             user-select: none;
             background-color: rgba(0, 0, 0, 0.4);
-            border-radius: 50%; /* Circular buttons */
-            width: 45px;
-            height: 45px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
         }
-
-        .carousel .next {
-            right: 15px;
-        }
-
-        .carousel .prev {
-            left: 15px;
-        }
-
+        .carousel .next { right: 15px; }
+        .carousel .prev { left: 15px; }
         .carousel .prev:hover,
         .carousel .next:hover {
             background-color: rgba(0, 0, 0, 0.7);
-            transform: translateY(-50%) scale(1.1); /* Slight zoom on hover */
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* NEW: Grid for Business Analytics Suite Components */
+        .suite-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
         }
     </style>
 </head>
@@ -83,8 +78,8 @@
 
         <div id="intro">
             <h1>Suyash Mohanty</h1>
-            <p>Data Science & Generative AI Engineer <br /> <br />
-                <strong>Skilled In:</strong> Generative AI, Agentic AI, NLP, LLM, Python, Power BI, Alteryx, SQL, Fast API, Streamlit
+            <p>Technology Consulting (Data Science & Analytics) <br /> <br />
+                <strong>Skilled In:</strong> Python, Power BI, Alteryx, SQL, Generative AI, NLP, LLM, Fast API, Streamlit
             </p>
             <ul class="actions">
                 <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -112,7 +107,6 @@
                     <h2><a href="https://github.com/SuyashMohanty/Agentic-AI-Blog-Generator/tree/main">Agentic AI Blog Generator</a></h2>
                     <p>An intelligent, agentic system designed to automatically generate high-quality, SEO-friendly blog posts. This project leverages LangGraph for dynamic, stateful workflows and Groq's Llama 3.1 LLM for lightning-fast content generation, with multi-language translation capabilities.</p>
                 </header>
-
                 <div class="carousel">
                     <div class="carousel-images">
                         <img src="images/Agentic AI Blog Generator/LangGraph Language Blog Workkflow.png" alt="Agentic AI Workflow Diagram" class="carousel-slide" />
@@ -123,7 +117,6 @@
                     <a class="prev">&#10094;</a>
                     <a class="next">&#10095;</a>
                 </div>
-
                 <br />
                 <ul class="actions special">
                     <li><a href="https://github.com/SuyashMohanty/Agentic-AI-Blog-Generator/tree/main" class="button large">View Project</a></li>
@@ -135,7 +128,6 @@
                     <h2><a href="https://github.com/SuyashMohanty/Gen-AI-RAG-Chatbot-with-Multi-Source-Querying-System">Generative AI Chatbot with Multi-Source Querying System</a></h2>
                     <p>This project implements a Retrieval-Augmented Generation (RAG) Chatbot with a multi-source querying system designed to handle natural language queries across Technical, Diet, and Patient-related information domains.</p>
                 </header>
-
                 <div class="carousel">
                     <div class="carousel-images">
                         <img src="images/RAG Chatbot/01.png" alt="RAG Chatbot Interface" class="carousel-slide" />
@@ -147,75 +139,72 @@
                     <a class="prev">&#10094;</a>
                     <a class="next">&#10095;</a>
                 </div>
-
                 <br />
                 <ul class="actions special">
                     <li><a href="https://github.com/SuyashMohanty/Gen-AI-RAG-Chatbot-with-Multi-Source-Querying-System" class="button large">View Project</a></li>
                 </ul>
             </article>
 
-            <section class="posts">
+            <article class="post featured">
                 <header class="major">
-                    <h1>Business Analytics Suite</h1>
-                    <p>A comprehensive suite of dashboards for analytics across pricing, sales, demand forecasting, and customer segmentation.</p>
+                    <h2>Business Analytics Suite</h2>
+                    <p>A comprehensive suite of dashboards for analytics across pricing, sales, demand forecasting, and customer segmentation, providing a holistic view of business performance and strategy.</p>
                 </header>
-
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator">Pricing Simulator</a></h2>
-                    </header>
-                    <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="image fit"><img src="images/Retail Edge Insight Suite/Pricing Simulator.png" alt="Pricing Simulator Dashboard" /></a>
-                    <p>This dashboard provides a comprehensive view of price optimization strategies tailored to different customer segments to maximize revenue and profit margin.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="button">View Project</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics">Sales Analytics</a></h2>
-                    </header>
-                    <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="image fit"><img src="images/Retail Edge Insight Suite/Sales Analytics 01.png" alt="Sales Analytics Dashboard" /></a>
-                    <p>An interactive tool for analyzing sales performance, identifying trends, and making data-driven decisions to boost revenue.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="button">View Project</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity">Price Elasticity</a></h2>
-                    </header>
-                    <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="image fit"><img src="images/Retail Edge Insight Suite/Price Elasticity.png" alt="Price Elasticity Dashboard" /></a>
-                    <p>Analyze the impact of price changes on demand, promotions, and competitor pricing across different customer segments and product categories.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="button">View Project</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting">Demand Forecasting</a></h2>
-                    </header>
-                    <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="image fit"><img src="images/Retail Edge Insight Suite/Demand Forecasting.png" alt="Demand Forecasting Dashboard" /></a>
-                    <p>A valuable tool for understanding and planning future demand, enabling informed decisions on inventory, production, and pricing strategies.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="button">View Project</a></li>
-                    </ul>
-                </article>
-
-                <article>
-                    <header>
-                        <h2><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation">Customer Segmentation</a></h2>
-                    </header>
-                    <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="image fit"><img src="images/Retail Edge Insight Suite/Customer Segmentation.png" alt="Customer Segmentation Dashboard" /></a>
-                    <p>Gain a comprehensive view of your customer base to identify key segments, understand their behavior, and develop targeted marketing strategies.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="button">View Project</a></li>
-                    </ul>
-                </article>
-
-            </section>
+                
+                <h3 style="text-align:center;">Suite Components</h3>
+                
+                <div class="suite-grid">
+                    <article>
+                        <header>
+                            <h3><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator">Pricing Simulator</a></h3>
+                        </header>
+                        <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="image fit"><img src="images/Retail Edge Insight Suite/Pricing Simulator.png" alt="Pricing Simulator Dashboard" /></a>
+                        <p>Optimize price points for different customer segments to maximize revenue and profit margin.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Pricing-Simulator" class="button">View Component</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <h3><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics">Sales Analytics</a></h3>
+                        </header>
+                        <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="image fit"><img src="images/Retail Edge Insight Suite/Sales Analytics 01.png" alt="Sales Analytics Dashboard" /></a>
+                        <p>An interactive tool to analyze sales performance, identify trends, and make data-driven decisions.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Sales-Analytics" class="button">View Component</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <h3><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity">Price Elasticity</a></h3>
+                        </header>
+                        <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="image fit"><img src="images/Retail Edge Insight Suite/Price Elasticity.png" alt="Price Elasticity Dashboard" /></a>
+                        <p>Analyze the impact of price changes on demand, promotions, and competitor pricing.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Price-Elasticity" class="button">View Component</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <h3><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting">Demand Forecasting</a></h3>
+                        </header>
+                        <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="image fit"><img src="images/Retail Edge Insight Suite/Demand Forecasting.png" alt="Demand Forecasting Dashboard" /></a>
+                        <p>A tool for planning future demand to inform inventory, production, and pricing strategies.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Demand-Forecasting" class="button">View Component</a></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <header>
+                            <h3><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation">Customer Segmentation</a></h3>
+                        </header>
+                        <a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="image fit"><img src="images/Retail Edge Insight Suite/Customer Segmentation.png" alt="Customer Segmentation Dashboard" /></a>
+                        <p>Gain a comprehensive view of your customer base to develop targeted marketing strategies.</p>
+                        <ul class="actions special">
+                            <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="button">View Component</a></li>
+                        </ul>
+                    </article>
+                </div> </article>
 
         </div> <footer id="footer">
             <section class="split contact">
@@ -261,10 +250,7 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Select all carousel components on the page
             const carousels = document.querySelectorAll('.carousel');
-
-            // Iterate over each carousel and initialize it
             carousels.forEach(carousel => {
                 const slides = carousel.querySelectorAll('.carousel-slide');
                 const prevButton = carousel.querySelector('.prev');
@@ -272,59 +258,37 @@
                 let currentSlide = 0;
                 let autoPlayInterval;
 
-                // Function to show a specific slide
                 function showSlide(index) {
-                    // Remove 'active' class from all slides
-                    slides.forEach((slide, i) => {
-                        slide.classList.remove('active');
-                    });
-
-                    // Add 'active' class to the target slide
+                    slides.forEach(slide => slide.classList.remove('active'));
                     slides[index].classList.add('active');
                 }
 
-                // Function to show the next slide
                 function next() {
                     currentSlide = (currentSlide + 1) % slides.length;
                     showSlide(currentSlide);
                 }
 
-                // Function to show the previous slide
                 function prev() {
                     currentSlide = (currentSlide - 1 + slides.length) % slides.length;
                     showSlide(currentSlide);
                 }
 
-                // Start the autoplay feature
                 function startAutoPlay() {
-                    autoPlayInterval = setInterval(next, 4000); // Change image every 4 seconds
+                    autoPlayInterval = setInterval(next, 4000);
                 }
 
-                // Stop the autoplay feature
                 function stopAutoPlay() {
                     clearInterval(autoPlayInterval);
                 }
 
-                // Add event listeners for next/prev buttons
-                nextButton.addEventListener('click', () => {
-                    next();
-                    // Reset interval on manual navigation
-                    stopAutoPlay();
-                    startAutoPlay();
-                });
+                if (nextButton && prevButton) {
+                    nextButton.addEventListener('click', () => { next(); stopAutoPlay(); startAutoPlay(); });
+                    prevButton.addEventListener('click', () => { prev(); stopAutoPlay(); startAutoPlay(); });
+                }
 
-                prevButton.addEventListener('click', () => {
-                    prev();
-                    // Reset interval on manual navigation
-                    stopAutoPlay();
-                    startAutoPlay();
-                });
-
-                // Pause autoplay on mouse hover
                 carousel.addEventListener('mouseenter', stopAutoPlay);
                 carousel.addEventListener('mouseleave', startAutoPlay);
 
-                // Initialize the carousel
                 if (slides.length > 0) {
                     showSlide(0);
                     startAutoPlay();
@@ -334,4 +298,3 @@
     </script>
 </body>
 </html>
-
