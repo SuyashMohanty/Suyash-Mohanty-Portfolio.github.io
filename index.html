@@ -8,7 +8,7 @@
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
     <style>
-        /* Carousel Styles */
+        /* Carousel Styles (still needed for the RAG Chatbot project) */
         .carousel {
             position: relative;
             max-width: 100%;
@@ -16,23 +16,33 @@
             overflow: hidden;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            /* Ensure height is adapted for content to prevent layout shifts */
+            min-height: 250px; /* Example min-height, adjust as needed */
+            display: flex; /* Helps ensure images fill space correctly */
+            align-items: center;
+            justify-content: center;
         }
         .carousel-images {
             display: flex;
+            position: relative; /* To stack slides absolutely */
+            width: 100%;
+            height: 100%;
         }
         .carousel-slide {
-            min-width: 100%;
+            width: 100%;
+            height: 100%; /* Make sure slides take full height of carousel */
+            object-fit: contain; /* Ensures images fit within boundaries */
             opacity: 0;
             transition: opacity 0.7s ease-in-out;
-            position: absolute;
+            position: absolute; /* Stack slides */
             top: 0;
             left: 0;
             visibility: hidden;
         }
         .carousel-slide.active {
-            position: relative;
             opacity: 1;
             visibility: visible;
+            position: relative; /* Active slide dictates height if needed, but absolute is fine with contain */
         }
         .carousel .prev,
         .carousel .next {
@@ -53,6 +63,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            z-index: 10; /* Ensure buttons are above images */
         }
         .carousel .next { right: 15px; }
         .carousel .prev { left: 15px; }
@@ -62,7 +73,27 @@
             transform: translateY(-50%) scale(1.1);
         }
 
-        /* NEW: Grid for Business Analytics Suite Components */
+        /* NEW: Grid for displaying multiple images statically */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns on larger screens, 1 on small */
+            gap: 1.5rem; /* Space between images */
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+        }
+        .image-grid img {
+            width: 100%;
+            height: 200px; /* Standardized height for all images in the grid */
+            object-fit: cover; /* Crop images to fit the standard size */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+        .image-grid img:hover {
+            transform: scale(1.03); /* Slight zoom on hover */
+        }
+
+        /* Grid for Business Analytics Suite Components */
         .suite-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -78,8 +109,8 @@
 
         <div id="intro">
             <h1>Suyash Mohanty</h1>
-            <p>Technology Consulting (Data Science & Analytics) <br /> <br />
-                <strong>Skilled In:</strong> Python, Power BI, Alteryx, SQL, Generative AI, NLP, LLM, Fast API, Streamlit
+            <p>Data Science And Generative AI Engineer <br /> <br />
+                <strong>Skilled In:</strong> Python, Generative AI, Agentic AI, NLP, LLM, Fast API, Streamlit Power BI, Alteryx, SQL
             </p>
             <ul class="actions">
                 <li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
@@ -107,15 +138,11 @@
                     <h2><a href="https://github.com/SuyashMohanty/Agentic-AI-Blog-Generator/tree/main">Agentic AI Blog Generator</a></h2>
                     <p>An intelligent, agentic system designed to automatically generate high-quality, SEO-friendly blog posts. This project leverages LangGraph for dynamic, stateful workflows and Groq's Llama 3.1 LLM for lightning-fast content generation, with multi-language translation capabilities.</p>
                 </header>
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="images/Agentic AI Blog Generator/LangGraph Language Blog Workkflow.png" alt="Agentic AI Workflow Diagram" class="carousel-slide" />
-                        <img src="images/Agentic AI Blog Generator/LangGraph Without Language.png" alt="Agentic AI Workflow without Language" class="carousel-slide" />
-                        <img src="images/Agentic AI Blog Generator/PostMan With Language.png" alt="Postman API request with language" class="carousel-slide" />
-                        <img src="images/Agentic AI Blog Generator/PostMan without Language.png" alt="Postman API request without language" class="carousel-slide" />
-                    </div>
-                    <a class="prev">&#10094;</a>
-                    <a class="next">&#10095;</a>
+                <div class="image-grid">
+                    <img src="images/Agentic AI Blog Generator/LangGraph Language Blog Workkflow.png" alt="Agentic AI Workflow Diagram" />
+                    <img src="images/Agentic AI Blog Generator/LangGraph Without Language.png" alt="Agentic AI Workflow without Language" />
+                    <img src="images/Agentic AI Blog Generator/PostMan With Language.png" alt="Postman API request with language" />
+                    <img src="images/Agentic AI Blog Generator/PostMan without Language.png" alt="Postman API request without language" />
                 </div>
                 <br />
                 <ul class="actions special">
@@ -204,9 +231,11 @@
                             <li><a href="https://github.com/SuyashMohanty/RetailEdge-Insight-Suite_Customer-Segmentation" class="button">View Component</a></li>
                         </ul>
                     </article>
-                </div> </article>
+                </div>
+            </article>
 
-        </div> <footer id="footer">
+        </div>
+        <footer id="footer">
             <section class="split contact">
                 <section class="alt">
                     <h3>Location</h3>
@@ -215,11 +244,12 @@
                 <section>
                     <h3>Phone</h3>
                     <p><a href="tel:+918763045544">+91-8763045544</a><br />
-                       <a href="tel:+918763174733">+91-8763174733</a></p>
+                       <a href="tel:+916372495896">+91-6372495896</a></p>
                 </section>
                 <section>
                     <h3>Email</h3>
-                    <p><a href="mailto:Suyash.Mohanty@outlook.com">Suyash.Mohanty@outlook.com</a></p>
+                    <p><a href="mailto:Suyash.Mohanty@outlook.com">Suyash.Mohanty@outlook.com</a><br />
+                       <a href="mailto:suyashmohanty.jobs@gmail.com">suyashmohanty.jobs@gmail.com</a></p>
                 </section>
                 <section>
                     <h3>Social</h3>
@@ -261,6 +291,8 @@
                 function showSlide(index) {
                     slides.forEach(slide => slide.classList.remove('active'));
                     slides[index].classList.add('active');
+                    // Ensure the carousel container adapts its height to the active image
+                    carousel.style.height = slides[index].clientHeight + 'px';
                 }
 
                 function next() {
@@ -291,6 +323,8 @@
 
                 if (slides.length > 0) {
                     showSlide(0);
+                    // Add an event listener to adjust carousel height when images load
+                    slides[0].addEventListener('load', () => showSlide(0));
                     startAutoPlay();
                 }
             });
